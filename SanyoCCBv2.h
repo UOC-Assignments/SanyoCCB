@@ -1,11 +1,20 @@
-#ifndef SanyoCCB_h
-#define SanyoCCB_h
+#ifndef SanyoCCBv2_h
+#define SanyoCCBv2_h
 
 #include <inttypes.h>
 #include "Arduino.h"
 
 #define _CCB_SEND    0
 #define _CCB_RECEIVE 1
+
+// Base delay (us).  Also used to time the CL (clock) line.
+// 100us should be enough even for slow CCB devices.
+//
+// 40Khz -> 25us cicles 
+// 40Khz -> 20us cicles 
+// 60Khz -> 16us cicles 
+
+#define CCB_DELAY 20
 
 class SanyoCCB {
 	public:

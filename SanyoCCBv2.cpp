@@ -36,11 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 
 #include <inttypes.h>
-#include "SanyoCCB.h"
-
-// Base delay (us).  Also used to time the CL (clock) line.
-// 100us should be enough even for slow CCB devices.
-#define CCB_DELAY 100
+#include "SanyoCCBv2.h"
 
 
 /******************************\
