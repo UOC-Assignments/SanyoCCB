@@ -15,6 +15,7 @@
 // 60Khz -> 16us cicles 
 
 #define CCB_DELAY 20
+//#define CCB_DELAY 50000000 //DEBUG (SLOW-MOTION)
 
 class SanyoCCB {
 	public:
