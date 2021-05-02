@@ -121,8 +121,15 @@ void SanyoCCB::ccb(byte address, byte *data, int8_t dataLength, uint8_t mode) {
 		case _CCB_SEND:
 		// Send data
 		// Note: as CCB devices usually reads registers data from MSB to LSB, the buffer is read from left to right
+		// DEBUG: WE NEED TO SEND IT BACKWARDS!
+		/*
 		for(i = dataLength - 1; i >= 0; i--)
 				writeByte(data[i]);
+		digitalWrite(_do_pin, LOW);
+		break;
+		*/
+		for(i = 0; i <= dataLength - 1; i++)
+		writeByte(data[i]);
 		digitalWrite(_do_pin, LOW);
 		break;
       
